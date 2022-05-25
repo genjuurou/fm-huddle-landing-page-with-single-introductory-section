@@ -8,26 +8,54 @@
   
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'desktop': "url('images/bg-desktop.svg')",
+            'mobile': "url('images/bg-mobile.svg')",
+          },
+          colors: {
+            'link': 'hsl(228, 45%, 44%)',
+            'violet': 'hsl(257, 40%, 49%)',
+            'soft-magenta': 'hsl(300, 69%, 71%)'
+          },
+          fontFamily: {
+            'open-sans': ['Open Sans', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
-
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+<body class="relative flex flex-col items-center min-h-screen font-poppins bg-violet bg-mobile bg-no-repeat text-white text-center">
+  <div class="max-w-[80%] my-[2.25rem]">
+    <header>
+      <a href="#" class="block max-w-[8rem]">
+        <img src="images/logo.svg" alt="Huddle's logo">
+      </a>
+    </header>
+    <main>
+      <img src="images/illustration-mockups.svg" alt="Huddle preview" class="my-[4.375rem]">
+  
+      <h1 class="text-[1.5rem] font-semibold">Build The Community Your Fans Will Love</h1>
+      <p class="my-[1.875rem]">
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
+      </p>
+      <a href="#" class="block rounded-full bg-white text-[.75rem] text-violet">Register</a>
+    </main>
+    <footer>SOCIALS</footer>
+  </div>
+  <div class="absolute bottom-0 text-[.6875rem]">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-link">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/genjuurou" target="_blank" class="text-link">Genjuurou</a>.
+  </div>
 </body>
 </html>
